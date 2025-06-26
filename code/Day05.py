@@ -35,7 +35,7 @@ print((lambda s: s.upper())("hello!")) # inline lambda
 
 #Use with map(), filter(), and reduce()
 
-email =["avantikaj@gmail.com ", " Sejaljj@gmailcom", "SSJJ@outlook.com", "xyz.com"]
+email =["avantikaj@gmail.com ", " Sejaljj@gmail.com", "SSJJ@outlook.com", "xyz.com", "thaibye@yahoo.com"]
 clean =list(map(lambda s: s.strip().lower(), email))
 print(clean)
 
@@ -46,3 +46,21 @@ from functools import reduce
 num =[1, 3, 4, 7, 9]
 total = reduce(lambda x, y: x + y, num)
 print(total)
+
+#List Comprehensions – Pythonic One-Liners
+
+square = [n * n for n in num]
+print(square)
+
+even = [n for n in num if n%2 == 0]
+print(even)
+
+odd =  [n for n in num if n%2 != 0]
+print(odd)
+
+contacts =[["Avantika", "Hyderabad"],["Sejal", "Banglore"]]
+names =[contact[0].upper() for contact in contacts]
+print(names)
+
+gmail = [mail for mail in email if mail.find("@gmail.com") != -1]
+print(gmail)
