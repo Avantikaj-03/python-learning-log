@@ -34,3 +34,15 @@ print(mean(67, 54))
 print((lambda s: s.upper())("hello!")) # inline lambda
 
 #Use with map(), filter(), and reduce()
+
+email =["avantikaj@gmail.com ", " Sejaljj@gmailcom", "SSJJ@outlook.com", "xyz.com"]
+clean =list(map(lambda s: s.strip().lower(), email))
+print(clean)
+
+valid = list(filter(lambda s:s.find("@") != -1, clean))
+print(valid)
+
+from functools import reduce
+num =[1, 3, 4, 7, 9]
+total = reduce(lambda x, y: x + y, num)
+print(total)
